@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sharbat", "Sharbat\Sharbat.csproj", "{A3CF18B2-836C-470D-B226-713A6D78305D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MyApp", "MyApp\MyApp.vdproj", "{E5FCBBD4-35B8-4A9E-AFB6-648F26DD2BB8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{A3CF18B2-836C-470D-B226-713A6D78305D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3CF18B2-836C-470D-B226-713A6D78305D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3CF18B2-836C-470D-B226-713A6D78305D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5FCBBD4-35B8-4A9E-AFB6-648F26DD2BB8}.Debug|Any CPU.ActiveCfg = Debug
-		{E5FCBBD4-35B8-4A9E-AFB6-648F26DD2BB8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
