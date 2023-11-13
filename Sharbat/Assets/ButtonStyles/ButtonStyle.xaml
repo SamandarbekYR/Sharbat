@@ -18,7 +18,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="CloseB" Property="Background" Value="#209240"/>
+                            <Setter TargetName="CloseB" Property="Background" Value="red"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
                             <Setter TargetName="CloseB" Property="Background" Value="#24A649"/>
@@ -31,5 +31,65 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    <Style x:Key="MinimizedButton" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="23"/>
+        <Setter Property="Width" Value="23"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MinB"
+                            Background="#F2B22D"
+                            CornerRadius="10"
+                            >
+                        <Path Fill="White" Margin="3"
+                              Data="{DynamicResource minimized}" Width="15" Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="MinB" Property="Background" Value="#DEA529"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MinB" Property="Background" Value="#F2B25D"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="MinB" Property="Background" Value="#AEA529"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MaximizedButton" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="23"/>
+        <Setter Property="Width" Value="23"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MaxB"
+                            Background="#2ABE3E"
+                            CornerRadius="10">
+                        <Path Fill="White" Margin="5"
+                              Data="{DynamicResource maximized}" Width="15" Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="MaxB" Property="Background" Value="#24A636"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#2ABE7E"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#219490"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

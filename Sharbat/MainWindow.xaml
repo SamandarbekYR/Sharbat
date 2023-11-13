@@ -10,30 +10,74 @@
         WindowState="Normal"
         WindowStyle="None"
         Title="MainWindow" Height="450" Width="800" Background="Transparent">
-    <Grid>
-        <Border Background="White"
-                CornerRadius="25"
-                Padding="0"
-                Margin="0"
-                >
-            <StackPanel>
-                <Border>
+    <Border CornerRadius="25"
+            >
+        <Border.Background>
+            <ImageBrush ImageSource="/Assets/Images/sharbat.jpg"  />
+        </Border.Background>
+        <Grid >
+            <Grid.RowDefinitions >
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="1"
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1"
                                 HorizontalAlignment="Right"
-                                
-                                Margin="0 0 15 0"
+                                Margin="0 10 15 0"
                                 >
-                            
-                        </Border>
+                            <Button Style="{DynamicResource MinimizedButton}" Click="btnMinimized"/>
+                            <Button Style="{DynamicResource MaximizedButton}" Click="btnMaximized"/>
+                            <Button Style="{DynamicResource CloseButtun}" Click="btnClos"/>
+                        </StackPanel>
+
                     </Grid>
-                </Border>
+                </Grid>
             </StackPanel>
-            
-        </Border>
-    </Grid>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Margin="-1,0,1,0">
+                        <Border Width="400" Margin="50" Background="AliceBlue" CornerRadius="25" >
+                            <StackPanel>
+                                <Border  Background="GreenYellow" CornerRadius="25 25 0 0">
+                                    <Label Content="      Shaftoli murabbosi ishlab chiqarish liniyasining maxsulot hisobi"
+                                           Margin="8 5 0 5"
+                                           Foreground ="BlueViolet"></Label>
+                                </Border>
+                                <StackPanel VerticalAlignment="Top" Margin=" 25">
+                                    <StackPanel >
+                                        <Label Content="Netto massasini kiriting!"
+                                               FontSize="12"
+                                               Foreground="BlueViolet" HorizontalAlignment="Left">
+                                        </Label>
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                                Width="50" 
+                                                HorizontalAlignment="Left"
+                                                Margin="2 0 0 0">
+                                            <TextBox Text="-------" 
+                                                     Background="Transparent"
+                                                     BorderThickness="0" HorizontalAlignment="Left" >
+                                                    
+                                                
+                                            </TextBox>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>
