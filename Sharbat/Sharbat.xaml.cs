@@ -75,10 +75,10 @@ namespace Sharbat
         private void btnInfo(object sender, RoutedEventArgs e)
         {
 
-            string pdfFilePath = @"Sharbat.pdf"; // Faylni to'liq yo'lini yozing
+            string pdfFilePath = @"Sharbat.docx"; // Faylni to'liq yo'lini yozing
 
             ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = "winword.exe"; // Microsoft Word ilovasini ishga tushiramiz
+            startInfo.FileName = "explorer.exe"; // Microsoft Word ilovasini ishga tushiramiz
             startInfo.Arguments = pdfFilePath; // Faylni tanlab ochish
             startInfo.UseShellExecute = true; // Kamandani standart operatsion tizim bilan ishlatish
 
