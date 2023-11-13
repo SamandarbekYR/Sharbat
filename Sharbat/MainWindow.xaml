@@ -33,7 +33,6 @@
                                 Margin="0 10 15 0"
                                 >
                             <Button Style="{DynamicResource MinimizedButton}" Click="btnMinimized"/>
-                            <Button Style="{DynamicResource MaximizedButton}" Click="btnMaximized"/>
                             <Button Style="{DynamicResource CloseButtun}" Click="btnClos"/>
                         </StackPanel>
 
@@ -49,22 +48,24 @@
                     <Border Grid.Column="0" Margin="-1,0,1,0">
                         <Border Width="400" Margin="50" Background="AliceBlue" CornerRadius="25" >
                             <StackPanel>
-                                <Border  Background="GreenYellow" CornerRadius="25 25 0 0">
+                                <Border  Background="#24A636" CornerRadius="25 25 0 0">
                                     <Label Content="      Shaftoli murabbosi ishlab chiqarish liniyasining maxsulot hisobi"
                                            Margin="8 5 0 5"
-                                           Foreground ="BlueViolet"></Label>
+                                           Foreground ="AliceBlue"></Label>
                                 </Border>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin=" 25">
                                     <StackPanel >
-                                        <Label Content="Netto massasi"
+                                        <Label Content="Netto massasi!"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
-                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="#24A636"
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox Text="-------" 
+                                            <TextBox x:Name="tbS"
+                                                     Width="50" 
+                                                     Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
                                                     
@@ -79,11 +80,13 @@
                                                HorizontalAlignment="Left"
                                               >
                                         </Label>
-                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="#24A636"
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox Text="-------" 
+                                            <TextBox x:Name="tbM"
+                                                     Width="50" 
+                                                     Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
 
@@ -96,17 +99,82 @@
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
-                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="#24A636"
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox Text="-------" 
+                                            <TextBox x:Name="tbX"
+                                                     Width="50" 
+                                                     Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
 
 
                                             </TextBox>
                                         </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="25">
+                                    <Border Background="#24A636" CornerRadius="10">
+                                        <Button Margin="5" 
+                                                Width="75" 
+                                                Height="20" 
+                                                Background="Transparent"
+                                                Content="Hisoblash"
+                                                Foreground="AliceBlue"
+                                                BorderThickness="0"
+                                                Click="btnHisoblash">
+                                            
+                                        </Button>
+                                    </Border>
+
+                                    <Border Background="#24A636" 
+                                            CornerRadius="10"
+                                            Margin="180 0 0 0">
+                                        <Button Margin="5" 
+                                                Width="75" 
+                                                Height="20" 
+                                                Background="Transparent"
+                                                Content="Yangilash"
+                                                Foreground="AliceBlue"
+                                                BorderThickness="0">
+
+                                        </Button>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Margin="25 0 0 0">
+                                    <Label  
+                                       Content="Shaftoli sarfi me’yorini aniqlaymiz!"
+                                       Foreground="BlueViolet">
+                                    </Label>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label 
+                                       Content="T3 ="
+                                       Foreground="BlueViolet">
+                                        </Label>
+                                        <Label  
+                                            x:Name="lbT3"
+                                       Content="0.00"
+                                       Foreground="BlueViolet">
+                                        </Label>
+                                        <Label  
+                                       Content=" kg/mshb"
+                                       Foreground="BlueViolet">
+                                        </Label>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label  
+                                       Content="Tsh ="
+                                       Foreground="BlueViolet">
+                                        </Label>
+                                        <Label x:Name="lbTsh" 
+                                       Content="0.00"
+                                       Foreground="BlueViolet">
+                                        </Label>
+                                        <Label  
+                                       Content=" kg/mshb"
+                                       Foreground="BlueViolet">
+                                        </Label>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>

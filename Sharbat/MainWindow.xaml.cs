@@ -43,5 +43,22 @@ namespace Sharbat
         {
             WindowState = WindowState.Minimized;
         }
+
+        private void btnHisoblash(object sender, RoutedEventArgs e)
+        {
+            double shaftoli,shakar;
+            if(tbS.Text.Length> 0 && tbM.Text.Length>0 && tbX.Text.Length>0)
+            {
+                shakar = (double.Parse(tbS.Text) * double.Parse(tbM.Text)) / (100-double.Parse( tbX.Text));
+                shaftoli = (double.Parse(tbS.Text) * 100) / (100 - double.Parse(tbX.Text));
+
+                lbT3.Content= shaftoli.ToString();
+                lbTsh.Content= shakar.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Malumotlarni to'liq kiriting!");
+            }
+        }
     }
 }
