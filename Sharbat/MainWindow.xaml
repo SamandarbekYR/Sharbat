@@ -10,7 +10,7 @@
         WindowState="Normal"
         WindowStyle="None"
         Title="MainWindow" Height="450" Width="800" Background="Transparent">
-    <Border CornerRadius="25"
+    <Border CornerRadius="25" MouseDown="dragMove"
             >
         <Border.Background>
             <ImageBrush ImageSource="/Assets/Images/sharbat.jpg"  />
@@ -28,6 +28,14 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
+                        <StackPanel Grid.Column="0" 
+                                    HorizontalAlignment="Left"
+                                    Margin="15 10 15 0">
+                            <Button Style="{DynamicResource InfoButton}"
+                                    Click="btnInfo">
+                                
+                            </Button>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Column="1"
                                 HorizontalAlignment="Right"
                                 Margin="0 10 15 0"
@@ -55,7 +63,7 @@
                                 </Border>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin=" 25">
                                     <StackPanel >
-                                        <Label Content="Netto massasi!"
+                                        <Label Content="Netto massasi k/g"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
@@ -73,8 +81,8 @@
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
-                                    <StackPanel Margin="25 0 0 0" >
-                                        <Label Content="Shakar miqdori!"
+                                    <StackPanel Margin="19 0 0 0" >
+                                        <Label Content="Shakar miqdori %"
                                                FontSize="12"
                                                Foreground="BlueViolet" 
                                                HorizontalAlignment="Left"
@@ -94,8 +102,8 @@
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
-                                    <StackPanel Margin="25 0 0 0" >
-                                        <Label Content="Qiyom yo'qotishlari!"
+                                    <StackPanel Margin="19 0 0 0" >
+                                        <Label Content="Qiyom yo'qotish%"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
@@ -115,32 +123,17 @@
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="25">
-                                    <Border Background="#24A636" CornerRadius="10">
-                                        <Button Margin="5" 
-                                                Width="75" 
-                                                Height="20" 
-                                                Background="Transparent"
-                                                Content="Hisoblash"
-                                                Foreground="AliceBlue"
-                                                BorderThickness="0"
-                                                Click="btnHisoblash">
-                                            
+                                    
+                                        <Button Style="{DynamicResource HisoblashButton}"
+                                                Click="btnHisoblash"
+                                                >
                                         </Button>
-                                    </Border>
-
-                                    <Border Background="#24A636" 
-                                            CornerRadius="10"
-                                            Margin="180 0 0 0">
-                                        <Button Margin="5" 
-                                                Width="75" 
-                                                Height="20" 
-                                                Background="Transparent"
-                                                Content="Yangilash"
-                                                Foreground="AliceBlue"
-                                                BorderThickness="0">
+                                        <Button Style="{DynamicResource YangilashButton}"
+                                                BorderThickness="0" Click="btnRefresh"
+                                                Margin="160 0 0 0">
 
                                         </Button>
-                                    </Border>
+                              
                                 </StackPanel>
                                 <StackPanel Margin="25 0 0 0">
                                     <Label  
@@ -175,6 +168,7 @@
                                        Content=" kg/mshb"
                                        Foreground="BlueViolet">
                                         </Label>
+                                       
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>

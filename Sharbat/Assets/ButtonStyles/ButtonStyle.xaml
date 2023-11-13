@@ -92,4 +92,116 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style x:Key="HisoblashButton" TargetType="{x:Type Button}">
+  
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MaxB" HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            Background="#2ABE3E"
+                            Height="40"
+                            Width="95"
+                            CornerRadius="10">
+                        <Label 
+                            Content="Hisoblash"
+                            Margin="15 5 0 0"
+                                  Background="Transparent"
+                                  Foreground="AliceBlue"
+                                  BorderThickness="0"
+                                  BorderBrush="Transparent">
+                            
+                        </Label>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="MaxB" Property="Background" Value="#24A636"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#2ABE7E"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#219490"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="YangilashButton" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MaxB" HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            Background="#2ABE3E"
+                            Height="40"
+                            Width="95"
+                            CornerRadius="10">
+                        <Label 
+                            Content="Yangilash"
+                            Margin="18 5 0 0"
+                                  Background="Transparent"
+                                  Foreground="AliceBlue"
+                                  BorderThickness="0"
+                                  BorderBrush="Transparent">
+
+                        </Label>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="MaxB" Property="Background" Value="#24A636"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#2ABE7E"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#219490"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="InfoButton" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MaxB" HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            Background="#2ABE3E"
+                            Height="40"
+                            Width="125"
+                            CornerRadius="10">
+                        <Label 
+                            Content="Dastur haqida"
+                            Margin="18 5 0 0"
+                                  Background="Transparent"
+                                  Foreground="AliceBlue"
+                                  BorderThickness="0"
+                                  BorderBrush="Transparent">
+
+                        </Label>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="MaxB" Property="Background" Value="#24A636"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#2ABE7E"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="MaxB" Property="Background" Value="#219490"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

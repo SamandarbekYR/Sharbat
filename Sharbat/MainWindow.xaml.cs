@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Amazon.Auth.AccessControlPolicy;
+using Effort.Internal.TypeGeneration;
+using System;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Sharbat
@@ -20,6 +15,8 @@ namespace Sharbat
     /// </summary>
     public partial class MainWindow : Window
     {
+      
+
         public MainWindow()
         {
             InitializeComponent();
@@ -46,19 +43,51 @@ namespace Sharbat
 
         private void btnHisoblash(object sender, RoutedEventArgs e)
         {
-            double shaftoli,shakar;
-            if(tbS.Text.Length> 0 && tbM.Text.Length>0 && tbX.Text.Length>0)
+            try
             {
-                shakar = (double.Parse(tbS.Text) * double.Parse(tbM.Text)) / (100-double.Parse( tbX.Text));
-                shaftoli = (double.Parse(tbS.Text) * 100) / (100 - double.Parse(tbX.Text));
+                double shaftoli, shakar;
+                if (tbS.Text.Length > 0 && tbM.Text.Length > 0 && tbX.Text.Length > 0)
+                {
+                    shakar = (double.Parse(tbS.Text) * double.Parse(tbM.Text)) / (100 - double.Parse(tbX.Text));
+                    shaftoli = (double.Parse(tbS.Text) * 100) / (100 - double.Parse(tbX.Text));
 
-                lbT3.Content= shaftoli.ToString();
-                lbTsh.Content= shakar.ToString();
+                    lbT3.Content = Math.Round(shaftoli, 2);
+                    lbTsh.Content = Math.Round(shakar, 2);
+                }
+                else
+                {
+                    MessageBox.Show("Malumotlarni to'liq kiriting", "Xatolik", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Malumotlarni to'liq kiriting!");
+                MessageBox.Show("Malumotlarni nato'g'ri kiritdingiz!!!", "Xatolik", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnRefresh(object sender, RoutedEventArgs e)
+        {
+            tbM.Text = "";
+            tbS.Text = "";
+            tbX.Text = "";
+        }
+
+        private void btnInfo(object sender, RoutedEventArgs e)
+        {
+
+            string pdfFilePath = "Assets/Docs/about.pdf";
+
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = "chrome.exe"; // "Explorer" ilovasini ishga tushirish
+            startInfo.Arguments = pdfFilePath; // Faylni tanlash
+            startInfo.UseShellExecute = true; // Kamandani standart operatsion tizim bilan ishlatish
+
+            // Processni boshlash
+            Process.Start(startInfo);
+        }
+        private void dragMove(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
