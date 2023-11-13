@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
         WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800" Background="Transparent">
+        Height="450" Width="800" Background="Transparent">
     <Border CornerRadius="25" MouseDown="dragMove"
             >
         <Border.Background>

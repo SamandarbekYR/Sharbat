@@ -75,15 +75,22 @@ namespace Sharbat
         private void btnInfo(object sender, RoutedEventArgs e)
         {
 
-            string pdfFilePath = "Assets/Docs/about.pdf";
+            string pdfFilePath = @"Sharbat.pdf"; // Faylni to'liq yo'lini yozing
 
             ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = "chrome.exe"; // "Explorer" ilovasini ishga tushirish
-            startInfo.Arguments = pdfFilePath; // Faylni tanlash
+            startInfo.FileName = "winword.exe"; // Microsoft Word ilovasini ishga tushiramiz
+            startInfo.Arguments = pdfFilePath; // Faylni tanlab ochish
             startInfo.UseShellExecute = true; // Kamandani standart operatsion tizim bilan ishlatish
 
-            // Processni boshlash
-            Process.Start(startInfo);
+            try
+            {
+                Process.Start(startInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Faylni ochishda xatolik yuz berdi: " + ex.Message, "Xatolik", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
         private void dragMove(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {

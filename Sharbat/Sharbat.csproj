@@ -5,11 +5,15 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>imagesshaftoli.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Docs\about.pdf" />
     <None Remove="Assets\Images\sharbat.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="imagesshaftoli.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,8 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Docs\about.pdf" />
     <Resource Include="Assets\Images\sharbat.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Docs\" />
   </ItemGroup>
 
 </Project>
