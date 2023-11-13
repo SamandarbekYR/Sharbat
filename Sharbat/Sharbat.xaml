@@ -102,8 +102,8 @@
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
-                                    <StackPanel Margin="19 0 0 0" >
-                                        <Label Content="Qiyom yo'qotish%"
+                                    <StackPanel Margin="18 0 0 0" >
+                                        <Label Content="Qiyom yo'qotish %"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
