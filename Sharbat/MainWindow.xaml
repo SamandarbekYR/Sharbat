@@ -54,9 +54,9 @@
                                            Margin="8 5 0 5"
                                            Foreground ="BlueViolet"></Label>
                                 </Border>
-                                <StackPanel VerticalAlignment="Top" Margin=" 25">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin=" 25">
                                     <StackPanel >
-                                        <Label Content="Netto massasini kiriting!"
+                                        <Label Content="Netto massasi"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
@@ -69,6 +69,42 @@
                                                      BorderThickness="0" HorizontalAlignment="Left" >
                                                     
                                                 
+                                            </TextBox>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel Margin="25 0 0 0" >
+                                        <Label Content="Shakar miqdori!"
+                                               FontSize="12"
+                                               Foreground="BlueViolet" 
+                                               HorizontalAlignment="Left"
+                                              >
+                                        </Label>
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                                Width="50" 
+                                                HorizontalAlignment="Left"
+                                                Margin="2 0 0 0">
+                                            <TextBox Text="-------" 
+                                                     Background="Transparent"
+                                                     BorderThickness="0" HorizontalAlignment="Left" >
+
+
+                                            </TextBox>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel Margin="25 0 0 0" >
+                                        <Label Content="Qiyom yo'qotishlari!"
+                                               FontSize="12"
+                                               Foreground="BlueViolet" HorizontalAlignment="Left">
+                                        </Label>
+                                        <Border BorderThickness="0 0 0 1" BorderBrush="Blue"
+                                                Width="50" 
+                                                HorizontalAlignment="Left"
+                                                Margin="2 0 0 0">
+                                            <TextBox Text="-------" 
+                                                     Background="Transparent"
+                                                     BorderThickness="0" HorizontalAlignment="Left" >
+
+
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
