@@ -13,7 +13,7 @@
     <Border CornerRadius="25" MouseDown="dragMove"
             >
         <Border.Background>
-            <ImageBrush ImageSource="/Assets/Images/sut.png"  />
+            <ImageBrush ImageSource="/Assets/Images/tuproq.png"  />
         </Border.Background>
         <Grid >
             <Grid.RowDefinitions >
@@ -32,7 +32,8 @@
                                     HorizontalAlignment="Left"
                                     Margin="15 10 15 0">
                             <Button Style="{DynamicResource InfoButton}"
-                                    Click="btnInfo">
+                                    Click="btnInfo"
+                                    Cursor="Hand">
                                 
                             </Button>
                         </StackPanel>
@@ -56,23 +57,22 @@
                     <Border Grid.Column="0" Margin="-1,0,1,0">
                         <Border Width="425" Margin="50" Background="AliceBlue" CornerRadius="25" >
                             <StackPanel>
-                                <Border  Background="#213AFF" CornerRadius="15 15 0 0">
-                                    <Label Content="Quyultirilgan sut qandli ishlab chiqarishda tarkibidagi yog‘ni me’yorlashtirish"
-                                           Margin="5 5 5 5"
+                                <Border  Background="{DynamicResource PrimaryButtonColor}" CornerRadius="15 15 0 0">
+                                    <Label Content="Tuproqning umumiy g‘ovakligini hisoblash"                                           Margin="5 5 5 5"
                                            Foreground ="AliceBlue"></Label>
                                 </Border>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin=" 25">
                                     <StackPanel >
-                                        <Label Content="Jmaxsulot"
+                                        <Label Content="Tuproq zichligi"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
                                         <Border BorderThickness="0 0 0 1" BorderBrush="#24A636"
-                                                Width="50" 
+                                                Width="60" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
                                             <TextBox x:Name="tb1"
-                                                     Width="50" 
+                                                     Width="60" 
                                                      Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
@@ -80,18 +80,18 @@
                                         </Border>
                                     </StackPanel>
                                     <StackPanel Margin="19 0 0 0" >
-                                        <Label Content="SOMOaralash"
+                                        <Label Content="Qattiq jismning zichligi"
                                                FontSize="12"
                                                Foreground="BlueViolet" 
                                                HorizontalAlignment="Left"
                                               >
                                         </Label>
                                         <Border BorderThickness="0 0 0 1" BorderBrush="#24A636"
-                                                Width="50" 
+                                                Width="100" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
                                             <TextBox x:Name="tb2"
-                                                     Width="50" 
+                                                     Width="100" 
                                                      Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
@@ -100,7 +100,7 @@
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
-                                    <StackPanel Margin="18 0 0 0" >
+                                    <!--<StackPanel Margin="18 0 0 0" >
                                         <Label Content="SOMOmaxsul"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
@@ -118,7 +118,7 @@
 
                                             </TextBox>
                                         </Border>
-                                    </StackPanel>
+                                    </StackPanel>-->
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="25">
                                     
@@ -135,12 +135,12 @@
                                 </StackPanel>
                                 <StackPanel Margin="25 0 0 0">
                                     <Label  
-                                       Content="Quyultirilgan sut qandli ishlab chiqarish texnologiyasi"
+                                       Content="Umumiy g‘ovaklik "
                                        Foreground="BlueViolet">
                                     </Label>
                                     <StackPanel Orientation="Horizontal">
                                         <Label 
-                                       Content="Jaralash ="
+                                       Content="P ="
                                        Foreground="BlueViolet">
                                         </Label>
                                         <Label  

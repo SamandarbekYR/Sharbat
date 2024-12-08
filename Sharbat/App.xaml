@@ -1,13 +1,15 @@
-﻿<Application x:Class="Sharbat.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Sharbat"
-             StartupUri="Sharbat.xaml">
+﻿<Application
+    x:Class="Sharbat.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Sharbat"
+    StartupUri="Sharbat.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Assets/Icons/Icon.xaml"/>
-                <ResourceDictionary Source="Assets/ButtonStyles/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Assets/Icons/Icon.xaml" />
+                <ResourceDictionary Source="Assets/ButtonStyles/ButtonStyle.xaml" />
+                <ResourceDictionary Source="Themes/LightTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

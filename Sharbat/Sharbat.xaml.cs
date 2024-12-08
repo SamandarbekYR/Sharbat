@@ -48,9 +48,10 @@ namespace Sharbat
         {
             try
             {
-                if (tb3.Text.Length > 0 && tb1.Text.Length > 0 && tb2.Text.Length > 0)
+                if ( tb1.Text.Length > 0 && tb2.Text.Length > 0)
                 {
-                    Javob.Content =  tb1.ParseDouble() * tb2.ParseDouble() / tb3.ParseDouble();
+                    var result = 1 - (tb1.ParseDouble() / tb2.ParseDouble() * 100 );
+                    Javob.Content = Math.Round(result,2);
 
                 }
                 else
@@ -68,7 +69,7 @@ namespace Sharbat
         {
             tb1.Text = "";
             tb2.Text = "";
-            tb3.Text = "";
+            Javob.Content = "0.00";
         }
 
         private void btnInfo(object sender, RoutedEventArgs e)

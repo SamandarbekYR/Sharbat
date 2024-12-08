@@ -5,15 +5,17 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>sut.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Images\tuproq.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Assets\Images\sut.png" />
+    <None Remove="Assets\Images\tuproq.ico" />
+    <None Remove="Assets\Images\tuproq.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="sut.ico" />
+    <Content Include="Assets\Images\tuproq.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +36,8 @@
 
   <ItemGroup>
     <Resource Include="Assets\Images\sut.png" />
+    <Resource Include="Assets\Images\tuproq.ico" />
+    <Resource Include="Assets\Images\tuproq.png" />
   </ItemGroup>
 
 </Project>
