@@ -10,7 +10,7 @@ public static class TextBoxExtensions
     {
         if (double.TryParse(textBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out double result))
         {
-            return result;
+            return Math.Round(result,2);
         }
         else
         {

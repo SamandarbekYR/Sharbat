@@ -1,15 +1,7 @@
-﻿using Amazon.Auth.AccessControlPolicy;
-using Effort.Internal.TypeGeneration;
-using Sharbat.Helper;
+﻿using Sharbat.Helper;
 using System;
-using System.Data;
 using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Runtime.Serialization;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Shapes;
 
 namespace Sharbat
 {
@@ -18,7 +10,7 @@ namespace Sharbat
     /// </summary>
     public partial class MainWindow : Window
     {
-      
+
 
         public MainWindow()
         {
@@ -50,8 +42,8 @@ namespace Sharbat
             {
                 if (tb3.Text.Length > 0 && tb1.Text.Length > 0 && tb2.Text.Length > 0)
                 {
-                    Javob.Content =  tb1.ParseDouble() * tb2.ParseDouble() / tb3.ParseDouble();
-
+                    double result = tb1.ParseDouble() * 1000 / (tb2.ParseDouble() * tb3.ParseDouble());
+                    Javob.Content = Math.Round(result, 3);
                 }
                 else
                 {
