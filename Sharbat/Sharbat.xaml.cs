@@ -1,11 +1,14 @@
 ﻿using Amazon.Auth.AccessControlPolicy;
 using Effort.Internal.TypeGeneration;
+using Sharbat.Helper;
 using System;
 using System.Data;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Shapes;
 
 namespace Sharbat
@@ -45,14 +48,10 @@ namespace Sharbat
         {
             try
             {
-                double shaftoli, shakar;
-                if (tbS.Text.Length > 0 && tbM.Text.Length > 0 && tbX.Text.Length > 0)
+                if (tb3.Text.Length > 0 && tb1.Text.Length > 0 && tb2.Text.Length > 0)
                 {
-                    shakar = (double.Parse(tbS.Text) * double.Parse(tbM.Text)) / (100 - double.Parse(tbX.Text));
-                    shaftoli = (double.Parse(tbS.Text) * 100) / (100 - double.Parse(tbX.Text));
+                    Javob.Content =  tb1.ParseDouble() * tb2.ParseDouble() / tb3.ParseDouble();
 
-                    lbT3.Content = Math.Round(shaftoli, 2);
-                    lbTsh.Content = Math.Round(shakar, 2);
                 }
                 else
                 {
@@ -67,15 +66,15 @@ namespace Sharbat
 
         private void btnRefresh(object sender, RoutedEventArgs e)
         {
-            tbM.Text = "";
-            tbS.Text = "";
-            tbX.Text = "";
+            tb1.Text = "";
+            tb2.Text = "";
+            tb3.Text = "";
         }
 
         private void btnInfo(object sender, RoutedEventArgs e)
         {
 
-            string pdfFilePath = @"Sharbat.docx"; // Faylni to'liq yo'lini yozing
+            string pdfFilePath = @"Doc.docx"; // Faylni to'liq yo'lini yozing
 
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.FileName = "explorer.exe"; // Microsoft Word ilovasini ishga tushiramiz

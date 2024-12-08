@@ -5,15 +5,15 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>imagesshaftoli.ico</ApplicationIcon>
+    <ApplicationIcon>sut.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Images\sharbat.jpg" />
+    <None Remove="Assets\Images\sut.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="imagesshaftoli.ico" />
+    <Content Include="sut.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +22,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Images\sharbat.jpg" />
+    <Folder Include="Assets\Docs\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Docs\" />
+    <None Include="..\..\..\..\Downloads\sut.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\sut.png" />
   </ItemGroup>
 
 </Project>

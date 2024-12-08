@@ -13,7 +13,7 @@
     <Border CornerRadius="25" MouseDown="dragMove"
             >
         <Border.Background>
-            <ImageBrush ImageSource="/Assets/Images/sharbat.jpg"  />
+            <ImageBrush ImageSource="/Assets/Images/sut.png"  />
         </Border.Background>
         <Grid >
             <Grid.RowDefinitions >
@@ -54,16 +54,16 @@
                         <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0" Margin="-1,0,1,0">
-                        <Border Width="400" Margin="50" Background="AliceBlue" CornerRadius="25" >
+                        <Border Width="425" Margin="50" Background="AliceBlue" CornerRadius="25" >
                             <StackPanel>
-                                <Border  Background="#24A636" CornerRadius="25 25 0 0">
-                                    <Label Content="      Shaftoli murabbosi ishlab chiqarish liniyasining maxsulot hisobi"
-                                           Margin="8 5 0 5"
+                                <Border  Background="#213AFF" CornerRadius="15 15 0 0">
+                                    <Label Content="Quyultirilgan sut qandli ishlab chiqarishda tarkibidagi yog‘ni me’yorlashtirish"
+                                           Margin="5 5 5 5"
                                            Foreground ="AliceBlue"></Label>
                                 </Border>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin=" 25">
                                     <StackPanel >
-                                        <Label Content="Netto massasi k/g"
+                                        <Label Content="Jmaxsulot"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
@@ -71,18 +71,16 @@
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox x:Name="tbS"
+                                            <TextBox x:Name="tb1"
                                                      Width="50" 
                                                      Foreground="BlueViolet"
                                                      Background="Transparent"
                                                      BorderThickness="0" HorizontalAlignment="Left" >
-                                                    
-                                                
                                             </TextBox>
                                         </Border>
                                     </StackPanel>
                                     <StackPanel Margin="19 0 0 0" >
-                                        <Label Content="Shakar miqdori %"
+                                        <Label Content="SOMOaralash"
                                                FontSize="12"
                                                Foreground="BlueViolet" 
                                                HorizontalAlignment="Left"
@@ -92,7 +90,7 @@
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox x:Name="tbM"
+                                            <TextBox x:Name="tb2"
                                                      Width="50" 
                                                      Foreground="BlueViolet"
                                                      Background="Transparent"
@@ -103,7 +101,7 @@
                                         </Border>
                                     </StackPanel>
                                     <StackPanel Margin="18 0 0 0" >
-                                        <Label Content="Qiyom yo'qotish %"
+                                        <Label Content="SOMOmaxsul"
                                                FontSize="12"
                                                Foreground="BlueViolet" HorizontalAlignment="Left">
                                         </Label>
@@ -111,7 +109,7 @@
                                                 Width="50" 
                                                 HorizontalAlignment="Left"
                                                 Margin="2 0 0 0">
-                                            <TextBox x:Name="tbX"
+                                            <TextBox x:Name="tb3"
                                                      Width="50" 
                                                      Foreground="BlueViolet"
                                                      Background="Transparent"
@@ -137,38 +135,23 @@
                                 </StackPanel>
                                 <StackPanel Margin="25 0 0 0">
                                     <Label  
-                                       Content="Shaftoli sarfi me’yorini aniqlaymiz!"
+                                       Content="Quyultirilgan sut qandli ishlab chiqarish texnologiyasi"
                                        Foreground="BlueViolet">
                                     </Label>
                                     <StackPanel Orientation="Horizontal">
                                         <Label 
-                                       Content="T3 ="
+                                       Content="Jaralash ="
                                        Foreground="BlueViolet">
                                         </Label>
                                         <Label  
-                                            x:Name="lbT3"
+                                            x:Name="Javob"
                                        Content="0.00"
                                        Foreground="BlueViolet">
                                         </Label>
                                         <Label  
-                                       Content=" kg/mshb"
+                                       Content=" %"
                                        Foreground="BlueViolet">
                                         </Label>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label  
-                                       Content="Tsh ="
-                                       Foreground="BlueViolet">
-                                        </Label>
-                                        <Label x:Name="lbTsh" 
-                                       Content="0.00"
-                                       Foreground="BlueViolet">
-                                        </Label>
-                                        <Label  
-                                       Content=" kg/mshb"
-                                       Foreground="BlueViolet">
-                                        </Label>
-                                       
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
